@@ -12,19 +12,19 @@ Inorder to model a chessboard within a data structure a 2D array was used with t
 
 ## Files Description:
 
-1. **Board Directory:**: 
+1. **Board Directory**: 
       - Board.py: In this file we create a class of chessBoard and initialize and declare a 2D array of gametiles with null pieces and then place all the chess pieces of the board on their respective starting positions. 
       - move.py: In this file we define some of the special cases in chess for example castling, enpassant rule, check. functions are used to check whether the the player is in check, return moves available in case the player is in check, return moves in case of castling and return moves available in case of enpassant rule.
       - Tile.py: It creates a Tile class which is placed on chessboard array. It can store a position number on the board and a chess piece object. 
 
-2. **chess Art directory:**: Contains all the images of the chess pieces.
+2. **chess Art directory**: Contains all the images of the chess pieces.
 
-3. **pieces directory:**: Contains files in which every chess piece class is defined. Every chess piece class has alliance (indicating whether the piece is white or black) and position ( coordinates on the chessboard ) attributes. It also has legalmove method which is used to calculate the legal moves for that chess piece on the chessboard. 
+3. **pieces directory**: Contains files in which every chess piece class is defined. Every chess piece class has alliance (indicating whether the piece is white or black) and position ( coordinates on the chessboard ) attributes. It also has legalmove method which is used to calculate the legal moves for that chess piece on the chessboard. 
 
-4. **Player directory:**:
+4. **Player directory**:
       - AI.py: Contains the logic for AI algorithm. The AI was implemented using recursive Minimax algorithm with alpha beta pruning and with the depth search of 3. The evaluation function assigned each chess piece a value, White pieces were assigned a positive value based on their rank and black pieces were assigned negative value based on their rank as well. So the total value becomes 0 in the start of the game where each side has all the pieces. The algorithm tried to search all possible moves up to the depth of 3 and calculate which next move could allow it to have best evaluation value.
 
-5.  **Playchess.py:**: Main file of the program which merges all the functionality from the other files and itself as well to implement all this on pygame GUI.
+5.  **Playchess.py**: Main file of the program which merges all the functionality from the other files and itself as well to implement all this on pygame GUI.
       
 5. **Screen**:
 Game Screen
