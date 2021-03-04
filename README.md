@@ -6,14 +6,13 @@ Python with pygame module
 
 
 ## Project Description:
-This is a Real Time Web Chat Application. For real time communication between server and client Websocket are implemented using Django Channels package which allows to use WebSockets and other non-HTTP protocols in the Django site. The regular http requests and javascript fetch api are also used in this project.
+This is a Chess game built using python pygame module for GUI. It has 2 playing mode either you can play against another human player or against AI. The AI was implemented using Minimax algorithm with alpha beta pruning and with the depth search of 3.
 
-This app allows user to do text chatting with other users individually or do group text chatting with many users. Users have the option to create new groups add contacts to their groups and assign any of the group member admin rights to the group. The admins of the group will be able to add or remove group members just like in Whatsapp.
+Inorder to model a chessboard within a data structure a 2D array was used with the dimensions of 8x8. The chessboard array could contain 64 gametiles objects and each gametile object stored a tile number and a chess piece object.
 
 ## Files Description:
-**These are some of the new files which are not found in regular Django project:**
 
-1. **routing.py**: 
+1. **Board**: 
 this file is a Django Channels routing configuration that is similar to a Django url.py file, in that it tells Channels what code to run when a websocket connection request is received by the Channels server.
 
 2. **Consumers.py**: 
