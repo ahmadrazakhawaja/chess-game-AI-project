@@ -13,7 +13,7 @@ Inorder to model a chessboard within a data structure a 2D array was used with t
 ## Files Description:
 
 1. **Board Directory**: 
-      - Board.py: In this file we create a class of chessBoard and initialize and declare a 2D array of gametiles with null pieces and then place all the chess pieces of the board on their respective starting positions. 
+      - Board.py: In this file we create a class of chessBoard and initialize and declare a 2D array of gametiles with null pieces and then place all the chess pieces on the board on their respective starting positions. 
       - move.py: In this file we define some of the special cases in chess for example castling, enpassant rule, check. functions are used to check whether the the player is in check, return moves available in case the player is in check, return moves in case of castling and return moves available in case of enpassant rule.
       - Tile.py: It creates a Tile class which is placed on chessboard array. It can store a position number on the board and a chess piece object. 
 
