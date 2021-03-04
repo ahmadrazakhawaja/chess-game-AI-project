@@ -42,9 +42,9 @@ Game Screen
 The AI for the game could certainly be improved. An average chess player can easily beat the AI because the AI sometimes make a blunder move , the reason could be because of the evaluation function and the shallow depth of the possibilities explored by the algorithm. The evaluation function could be improved to also take into consideration the position of the chess pieces on the board along with value of the chess pieces. We can train a deep learning model and deploy it into the game if we have enough data.
 
 ## How to Run the Application
-`git clone https://github.com/ESWZY/cs50web-final-project.git`
+`git clone https://github.com/ahmadrazakhawaja/chess-game-AI-project.git`
 
-`cd cs50web-final-project`
+`cd chess-game-AI-project`
 
 `pip install -r requirements.txt`
 
