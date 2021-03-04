@@ -12,8 +12,8 @@ Inorder to model a chessboard within a data structure a 2D array was used with t
 
 ## Files Description:
 
-1. **Board**: 
-this file is a Django Channels routing configuration that is similar to a Django url.py file, in that it tells Channels what code to run when a websocket connection request is received by the Channels server.
+1. **Board Directory:**: 
+      - Board.py: 
 
 2. **Consumers.py**: 
 When Django accepts an HTTP request, it consults the root url.py to lookup a view function, and then calls the view function to handle the request. Similarly, when Channels accepts a WebSocket connection, it consults the routing.py file to lookup a consumer, and then calls various functions on the consumer to handle events from the connection. So, this file contains all the methods to handle the websocket connections for example a method for handling incoming message from a client would transfer the message to the recipient group or individual and simultaneously save the message in the database all this would be happening in real time.
