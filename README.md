@@ -29,9 +29,8 @@ Inorder to model a chessboard within a data structure a 2D array was used with t
 5. **Screen**:
 Game Screen
 
-    1. index.html: 
-    This is the index page where user can see all his contacts and groups and can create new group or add new contact. <br/><br/>
-    ![index page](https://github.com/ahmadrazakhawaja/chat-application/blob/master/cs50-web-screenshots/Index_page.png?raw=true)<br/><br/>
+    1. Main Screen: 
+    (https://raw.githubusercontent.com/ahmadrazakhawaja/chess-game-AI-project/master/project_images/Screenshot%202021-03-04%20at%206.16.22%20PM.png)<br/><br/>
     2. group.html:
     This is the group_chat page where user can see all the group chat and send text to group<br/><br/>
     ![index page](https://github.com/ahmadrazakhawaja/chat-application/blob/master/cs50-web-screenshots/Group_chat_page1.png?raw=true)<br/><br/>
