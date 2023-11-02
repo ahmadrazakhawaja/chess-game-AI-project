@@ -251,47 +251,28 @@ class AI:
 
 
     def calculateb(self,gametiles):
-        value=0
-        for x in range(8):
-            for y in range(8):
-                    if gametiles[y][x].pieceonTile.tostring()=='P':
-                        value=value-100
-
-                    if gametiles[y][x].pieceonTile.tostring()=='N':
-                        value=value-350
-
-                    if gametiles[y][x].pieceonTile.tostring()=='B':
-                        value=value-350
-
-                    if gametiles[y][x].pieceonTile.tostring()=='R':
-                        value=value-525
-
-                    if gametiles[y][x].pieceonTile.tostring()=='Q':
-                        value=value-1000
-
-                    if gametiles[y][x].pieceonTile.tostring()=='K':
-                        value=value-10000
-
-                    if gametiles[y][x].pieceonTile.tostring()=='p':
-                        value=value+100
-
-                    if gametiles[y][x].pieceonTile.tostring()=='n':
-                        value=value+350
-
-                    if gametiles[y][x].pieceonTile.tostring()=='b':
-                        value=value+350
-
-                    if gametiles[y][x].pieceonTile.tostring()=='r':
-                        value=value+525
-
-                    if gametiles[y][x].pieceonTile.tostring()=='q':
-                        value=value+1000
-
-                    if gametiles[y][x].pieceonTile.tostring()=='k':
-                        value=value+10000
-
+        piece_values = {
+                'P': -100, 'N': -350, 'B': -350, 'R': -525,
+                'Q': -1000, 'K': -10000,
+                'p': 100, 'n': 350, 'b': 350, 'r': 525,
+                'q': 1000, 'k': 10000
+                }
+        value = 0
+        for y in range(8):
+            for x in range(8):
+                piece_str = gametiles[y][x].pieceonTile.tostring()
+                piece_value = piece_values.get(piece_str, 0)
+                value += piece_value
+                if piece_str in ['P', 'p']:
+                    if x in [2, 3, 4, 5]:
+                        value += 10 if piece_str == 'p' else -10
+                if piece_str in ['N', 'n']:
+                    distance_center = max(abs(3.5 - x), abs(3.5 - y))
+                    value -= (8 - distance_center) * (20 if piece_str == 'n' else -20)
+                if piece_str in ['B', 'b']:
+                    diagonal_dist = min(y, x, 7 - y, 7 - x)
+                    value += diagonal_dist * (10 if piece_str == 'b' else -10)
         return value
-
 
     def move(self,gametiles,y,x,n,m):
         promotion=False
